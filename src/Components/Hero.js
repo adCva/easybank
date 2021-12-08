@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from './Button';
 
+
 function Hero() {
-    const [ biggerScreen, setBiggerScreen ] = useState(true);
     return (
         <div className="hero-wrapper">
             <div className="hero-container">
@@ -19,4 +19,4 @@ function Hero() {
     )
 }
 
-export default Hero
+export default Hero;
