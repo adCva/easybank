@@ -1,0 +1,184 @@
+.navbar-wrapper {
+    background-color: $white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    
+    .navbar-container {
+        width: 88%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 1.3rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+
+        // ================ Logo
+        .nav-logo {
+            height: 21px;
+        }
+
+
+        // ================ Nav Menu
+        .nav-menu-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: calc(2.6rem + 21px);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            
+            // ================ Nav Menu Actual Container
+            .nav-menu {
+                background-color: $very-light-gray;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+                padding: 2rem 0;
+                width: 88%;
+                border-radius: 7px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+
+                // ================ Links
+                .menu-link {
+                    background: transparent;
+                    color: $dark-blue;
+                    font-family: $ff-public-sans;
+                    font-size: 18px;
+                    font-weight: $fw-regular;
+                    margin-bottom: 1.5rem;
+                    border: none;
+                    outline: none;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    
+        .invite-btn {
+            display: none;
+        }
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .navbar-wrapper {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        
+        .navbar-container {
+            padding: 0;
+
+
+            // ================ Open Menu Icon
+            .mobile-menu-icon {
+                display: none;
+            }
+
+
+            // ================ Nav Menu
+            .nav-menu-container {
+                background-color: transparent;
+                position: initial;
+                display: inline-block;
+
+
+                // ================ Nav Menu Actual Container
+                .nav-menu {
+                    background-color: transparent;
+                    flex-direction: row;
+                    margin-top: 0;
+                    padding: 0;
+                    width: auto;
+                    border-radius: 0;
+                    box-shadow: none;
+
+
+                    // ================ Links
+                    .menu-link {
+                        position: relative;
+                        color: $grayish-blue;
+                        font-size: 16.5px;
+                        margin: 0 1.3rem 0 0;
+                        padding: 1.5rem 0 calc(1.5rem - 4px);
+                        cursor: pointer;
+                        transition: all 0.25s ease-in-out;
+    
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+
+
+                        &:hover {
+                            color: $dark-blue;
+                            
+                            &:after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                bottom: -1px;
+                                height: 4px;
+                                width: 100%;
+                                background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 63%);
+                                animation: fade 0.25s ease-in-out;
+                            }
+                        }
+
+                        
+                        &:focus {
+                            color: $dark-blue;
+
+                            &:after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                bottom: -1px;
+                                height: 4px;
+                                width: 100%;
+                                background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 63%);
+                                animation: fade 0.25s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .invite-btn {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+
+
+@media (min-width: 1200px) {
+    .navbar-wrapper {
+        .navbar-container {
+            .nav-menu-container {
+                .nav-menu {
+                    .menu-link {
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}

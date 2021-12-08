@@ -1,0 +1,24 @@
+.btn {
+    background: linear-gradient(100deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+    color: $very-light-gray;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+
+    @media (min-width: 768px) {
+        padding: 1rem 1.5rem;
+    }
+
+    @media (min-width: 1000px) {
+        &:hover {
+            background: linear-gradient(100deg, rgba(130,224,156,1) 0%, rgba(111,197,219,1) 100%);
+        }
+
+        &:focus {
+            background: linear-gradient(100deg, rgba(130,224,156,1) 0%, rgba(111,197,219,1) 100%);
+        }
+    }
+}

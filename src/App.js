@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Rest.css";
+import "./Scss/style.css";
+import Nav from "./Components/Nav";
+import Hero from "./Components/Hero";
+import About from "./Components/About";
+import Blog from "./Components/Blog";
+import Footer from "./Components/Footer";
+// https://www.frontendmentor.io/solutions/easybank-landing-page-with-html-and-sass-m3pdqyTlW
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Nav />
+        <Hero />
       </header>
+      <main>
+        <About />
+        <Blog />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -1,0 +1,55 @@
+@import "config";
+@import "nav";
+@import "hero";
+@import "about";
+@import "blog";
+@import "footer";
+@import "button";
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $ff-public-sans;
+    font-weight: $fw-regular;
+    font-size: 18px;
+    background-color: $white;
+}
+
+footer {
+    background-color: $dark-blue;
+}
+
+
+.specil {
+    background-color: red;
+    height: 500px;
+    z-index: -1;
+}
+
+/*
+@media (min-width: 768px) {
+    body {
+        background-origin: content-box;
+        background-image: url("../Assets/mobile/image-mockups.png"), url("../Assets/desktop/bg-intro-desktop.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 40vw;
+        background-position-x: 110%, 110%;
+        background-position-y: -130px, 0;
+    }
+}
+*/
+
+
+@keyframes fade {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
