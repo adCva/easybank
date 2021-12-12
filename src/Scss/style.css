@@ -128,6 +128,24 @@
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
   }
+  .navbar-wrapper .navbar-container .nav-menu-container .nav-menu .menu-link:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: 97%;
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#31d35c), color-stop(63%, #2bb7da));
+    background: linear-gradient(90deg, #31d35c 0%, #2bb7da 63%);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
   .navbar-wrapper .navbar-container .nav-menu-container .nav-menu .menu-link:last-of-type {
     margin-right: 0;
   }
@@ -135,31 +153,19 @@
     color: #2d314d;
   }
   .navbar-wrapper .navbar-container .nav-menu-container .nav-menu .menu-link:hover:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    height: 4px;
-    width: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#31d35c), color-stop(63%, #2bb7da));
-    background: linear-gradient(90deg, #31d35c 0%, #2bb7da 63%);
-    -webkit-animation: fade 0.25s ease-in-out;
-            animation: fade 0.25s ease-in-out;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
   .navbar-wrapper .navbar-container .nav-menu-container .nav-menu .menu-link:focus {
     color: #2d314d;
   }
   .navbar-wrapper .navbar-container .nav-menu-container .nav-menu .menu-link:focus:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    height: 4px;
-    width: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(#31d35c), color-stop(63%, #2bb7da));
-    background: linear-gradient(90deg, #31d35c 0%, #2bb7da 63%);
-    -webkit-animation: fade 0.25s ease-in-out;
-            animation: fade 0.25s ease-in-out;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
   .navbar-wrapper .navbar-container .invite-btn {
     display: inline-block;
@@ -537,7 +543,7 @@
 
 .blog-wrapper .blog-container .blog-card-container .blog-card-wrapper {
   background-color: #ffffff;
-  width: 300px;
+  max-width: 300px;
   margin: 0 auto 3.5rem;
   border-radius: 5px;
 }
@@ -575,6 +581,25 @@
   line-height: 1.5;
 }
 
+@media (min-width: 600px) {
+  .blog-wrapper .blog-container .blog-card-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blog-wrapper .blog-container .blog-card-container .blog-card-wrapper {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .blog-wrapper {
     padding: 6rem 0 7rem;
@@ -587,22 +612,11 @@
     font-size: 35px;
   }
   .blog-wrapper .blog-container .blog-card-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .blog-wrapper .blog-container .blog-card-container .blog-card-wrapper {
     width: auto;
     margin: 0;
-    margin-bottom: 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
             box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
     cursor: pointer;

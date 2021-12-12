@@ -16,6 +16,9 @@ function Nav() {
     const closeOnLinkClick = () => {
         if (window.innerWidth < 767) {
             setOpenMobileMenu(false);
+            alert("This button does nothing.");
+        } else {
+            alert("This button does nothing.");
         }
     }
 
